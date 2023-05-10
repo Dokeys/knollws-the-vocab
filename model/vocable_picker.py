@@ -1,3 +1,15 @@
+"""
+vocable_picker.py
+
+Created on: 10.05.2023
+Author: Dominik Knoll
+
+Description:
+The VocablePicker is the model part of the program. This part of the program is 
+responsible for everything to do with vocabluary. Everything what have to do with
+loading a dicitionary, checking the user input vocables and choosing the next 
+vocable should be placed here.
+"""
 import random
 
 from model.current_dictionary import CurrentDictionary

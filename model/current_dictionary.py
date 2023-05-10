@@ -1,12 +1,14 @@
 """
 current_dictionary.py
 
-Created on: 10.0.2023
+Created on: 10.05.2023
 Author: Dominik Knoll
 
 Description:
-CurrentDictionary is a Singleton what inherits everything form the Dictionary class.
+CurrentDictionary is a singleton what inherits everything form the Dictionary class.
 In this class the current dictionary of the program is saved.
+With the get_instance() method it can be called everywhere in the program. Just one initial
+create of the singleton, at the start of the programm is needed.
 """
 from model.dictionary import Dictionary
 

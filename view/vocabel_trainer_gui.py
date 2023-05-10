@@ -1,4 +1,3 @@
-import os
 import threading
 import tkinter
 from tkinter import ttk
@@ -48,15 +47,15 @@ class VocabelTrainerGui(tkinter.Tk, UI):
         self.input_output_frame.pack_forget()
         self.settings_frame.pack(fill="both", expand=True, padx=100)
         self.update()
-        # ToDo
+        # TODO
         print(f"{self.winfo_width()}x{self.settings_frame.winfo_height()}")
         self.geometry(f"{self.winfo_width()}x{self.settings_frame.winfo_height()}")
 
-    # ToDo
+    # TODO
     def bind_user_input(self, callback: Callable[[tkinter.Event], None]) -> None:
         self.input_output_frame.txt_entry_field.bind("<Return>", callback)
 
-    # ToDo
+    # TODO implement the tip feature
     def bind_tip(self, callback: Callable[[tkinter.Event], None]) -> None:
         self.input_output_frame.txt_entry_field.bind("<Control_L>", callback)
 

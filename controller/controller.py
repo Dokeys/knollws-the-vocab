@@ -1,3 +1,13 @@
+"""
+controller.py
+
+Created on: 10.05.2023
+Author: Dominik Knoll
+
+Description:
+TODO add a description and clarify the main part of this module
+
+"""
 from model.vocable_picker import VocablePicker
 from view.ui import UI
 
