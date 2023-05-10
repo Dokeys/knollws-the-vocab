@@ -1,12 +1,17 @@
+"""
+current_dictionary.py
+
+Created on: 10.0.2023
+Author: Dominik Knoll
+
+Description:
+CurrentDictionary is a Singleton what inherits everything form the Dictionary class.
+In this class the current dictionary of the program is saved.
+"""
 from model.dictionary import Dictionary
 
 
 class CurrentDictionary(Dictionary):
-    """
-    This is a Singleton what inherits everything form the Dictionary class.
-    In this class the current dictionary of the program is saved.
-    """
-
     __instance = None
 
     def __init__(self, dictionary_file_path: str = None) -> None:
