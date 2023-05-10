@@ -1,3 +1,14 @@
+"""
+menubar.py
+
+Created on: 10.05.2023
+Author: Dominik Knoll
+
+Description:
+This contains everything for the menubar on the top of the vocabel_trainer_gui. 
+With the menubar it is possible to load another dictionary, change the searched language, 
+open the settings or exit the program.
+"""
 from tkinter import filedialog
 import tkinter
 from typing import Callable
@@ -14,7 +25,7 @@ class MenuBar(tkinter.Menu):
         )
         # -> Searched language
         self.selected_language = tkinter.IntVar()
-        self.selected_language.set(1)  # ToDo not so nice
+        self.selected_language.set(1)  # TODO Not so nice
         self.searched_language_bar = tkinter.Menu(
             self, tearoff=False, font=("Arial", 14)
         )
@@ -56,8 +67,9 @@ class MenuBar(tkinter.Menu):
         print(filename)
         if filename != "":
             print(f"new_dictionary {filename}")
+        # TODO implement the load dictionary feature
 
-    def set_up_dictionary_language_information(self, native: str, foreign) -> None:
+    def set_up_dictionary_language_information(self, native: str, foreign: str) -> None:
         # change select language radiobuttons
         self.searched_language_bar.entryconfig(0, label=native)
         self.searched_language_bar.entryconfig(1, label=foreign)
@@ -65,7 +77,7 @@ class MenuBar(tkinter.Menu):
     #
     def _switch_language(self) -> None:
         """This method is called when the searched language radiobuttons are pushed."""
-        print(f"change_searched_language{self.selected_language.get()}")
+        print(f"change_searched_language {self.selected_language.get()}")
 
     def _settings_clicked(event=None) -> None:
         print("settings clicked")
