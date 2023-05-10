@@ -15,9 +15,13 @@ This is a redesign with the MVC-Pattern. This leads to a better decoupling betwe
 
 ```mermaid
 flowchart LR
-    View-->|reads|Model
-    View-->|notifies|Controller
-    Controller-->|updates|Model
+    View-->|Action|Controller
+    Controller-->|Update|View
+    Model-->|Notify|Controller
+    Controller-->|Update|Model
+    
+    Model<-->Database[(Database)]
+    User<-->View
 ```
 
 ## Model
